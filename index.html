@@ -18,8 +18,9 @@
                 <ul>
                    <li><a href="index.html">INICIO</a></li>
              <li><a href="productos.html">PRODUCTOS</a></li>
-              <li><a href="carrito.html">CARRITO</a></li>
-                </ul>
+            <li id="registro-link"><a href="cuestion.html">REGISTRARSE</a></li></ul>
+            <li id="logout-link" style="display: none;"><a href="#">CERRAR SESIÓN</a></li>
+
             </nav>
         </div>
     </header>
@@ -91,7 +92,18 @@
         <a href="https://www.tiktok.com/@catarsis39"><button>Tik Tok</button></a>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const isRegistered = localStorage.getItem("isRegistered");
 
+        if (isRegistered === "true") {
+            const registroLink = document.getElementById("registro-link");
+            if (registroLink) {
+                registroLink.style.display = "none";
+            }
+        }
+    });
+</script>
     <footer>
         <p>&copy; 2025 Perfumeria Catarsis| Todos los derechos reservados</p>
     </footer>

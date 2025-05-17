@@ -93,6 +93,19 @@
       });
     });
   </script>
+<!-- En registro.html -->
+<script>
+    function registrarUsuario() {
+        // Aquí iría tu lógica de validación y registro
+        localStorage.setItem("isRegistered", "true");
+
+        // Redirige al inicio
+        window.location.href = "index.html";
+    }
+</script>
+
+<!-- Y un botón que llama esa función -->
+<button onclick="registrarUsuario()">Registrarse</button>
 
 </body>
 </html>
